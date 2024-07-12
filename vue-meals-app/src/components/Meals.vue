@@ -16,4 +16,5 @@ const { meals } = defineProps({
   <div v-if="!meals.length" class="flex justify-center text-gray-600 p-8">
     There are no meals
   </div>
+  
 </template>

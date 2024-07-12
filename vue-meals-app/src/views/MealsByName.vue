@@ -4,7 +4,7 @@ import store from "../store";
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 // import MealItem from "../components/MealItem.vue";
-import Meals from '../components/Meals.vue'
+import Meals from "../components/Meals.vue";
 
 console.log("Search Meal By Name");
 
@@ -44,7 +44,6 @@ onMounted(() => {
 
   <Meals :meals="meals" />
   <!-- <MealItem v-for="meal of meals" :key="meal.idMeal" :meal="meal"  /> -->
-
 </template>
 
 <style scoped></style>
