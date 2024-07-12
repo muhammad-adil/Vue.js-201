@@ -1,3 +1,5 @@
-export default { 
-    searchedMeals: [] 
+export default {
+  searchedMeals: [],
+  mealsByLetter: [],
+  mealsByIngredient: []
 };
