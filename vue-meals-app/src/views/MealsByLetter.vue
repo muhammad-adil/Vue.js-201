@@ -23,8 +23,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex p-8 flex-col items-center justify-center">
-    <div class="flex justify-center mt-2 gap-4">
+  <div class="w-full flex p-8 flex-col items-center justify-center">
+    <div class="flex flex-wrap justify-center mt-4 gap-6 text-[#16D9F9] text-3xl font-bold mb-8">
       <router-link
         :to="{ name: 'byLetter', params: { letter } }"
         :key="letter"
@@ -36,6 +36,7 @@ onMounted(() => {
   </div>
 
   <Meals :meals="meals" />
+  
 </template>
 
 <style scoped></style>

@@ -12,7 +12,13 @@ let keyword = ref<string>("");
 
 const meals = computed(() => store.state.searchedMeals);
 function searchMeals() {
+  if (keyword.value) {
   store.dispatch("searchMeals", keyword.value);
+  }
+  else {
+    store.commit("setSearchedMeals", []);
+    // route.params.name = keyword.value;
+  }
 }
 
 const route = useRoute();
@@ -20,8 +26,6 @@ onMounted(() => {
   keyword.value = route.params.name as string;
   if (keyword.value) {
     searchMeals();
-  } else {
-    route.params.name = keyword.value;
   }
 });
 </script>

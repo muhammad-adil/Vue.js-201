@@ -1,5 +1,7 @@
 export function setSearchedMeals(
-  state: { searchedMeals: Array<T> },
+  state: {
+    [x: string]: any; searchedMeals: Array<T> 
+},
   meals: Array<T>
 ) {
   state.searchedMeals = meals || [];
@@ -17,4 +19,8 @@ export function setMealsByIngredient(
   meals: Array<T>
 ) {
   state.mealsByIngredient = meals || [];
+}
+
+export function setIngredient(state: { ingredient: String; }, ingredient: String) {
+  state.ingredient = ingredient
 }

@@ -22,11 +22,11 @@ const { meal } = defineProps({
     </router-link>
     <div class="p-3">
       <h3 class="font-bold">{{ meal.strMeal }}</h3>
-      <p class="mb-4">
-        {{ `${meal.strInstructions.slice(0, 82)} …`  }}
+      <p class="mb-4" v-if="meal?.strInstructions">
+        {{ `${meal?.strInstructions.slice(0, 82)} …`  }}
         <!-- {{ $filters.truncateWords(meal.strInstructions, 20) }} -->
       </p>
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between mt-4">
         <YouTubeButton :href="meal.strYoutube" />
       </div>
     </div>
