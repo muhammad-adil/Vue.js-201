@@ -1,5 +1,6 @@
 <template>
-  <header class="bg-white shadow h-16 flex justify-between items-stretch">
+  <header class="bg-white shadow h-16">
+    <nav class="max-w-[1200px] mx-auto h-16 flex justify-between items-stretch">
     <router-link
       :to="{ name: 'home' }"
       class="inline-flex items-center h-full px-5 text-orange-500 font-bold"
@@ -26,5 +27,6 @@
         Meals By Ingredients
       </router-link>
     </div>
+  </nav>
   </header>
 </template>
