@@ -13,4 +13,12 @@
   background-image: repeating-radial-gradient(circle closest-corner at 100px 100px, #553c9a, #ee4b2b 10%, #553c9a 20%);
     /* background-image: conic-gradient(#553c9a 0%, #553c9a 33%, #ee4b2b 33%, #ee4b2b 66%, #00c2cb 66%, #00c2cb 99%); */
 }
-  
+
+.h-full-vh{
+    height: 100vh;
+}
+/* .footer{
+  position: relative;
+  bottom: 0;
+  top: 100%;
+} */

@@ -21,7 +21,7 @@ watch(route, () => {
 </script>
 
 <template>
-  <div class="p-8 pb-0">
+  <div class="p-8 pb-0 w-full">
     <h1 class="text-4xl font-bold mb-8 text-orange-500">
       Meals for <span class="text-4xl font-bold mb-8 text-[#16D9F9]">{{ ingredient.strIngredient }}</span>
     </h1>

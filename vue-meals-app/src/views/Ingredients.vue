@@ -33,10 +33,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="p-8 pb-0">
+  <div class="p-8 pb-0 w-full">
     <h1 class="text-4xl font-bold mb-4 text-orange-500">Ingredients</h1>
 
-    <div class="px-8">
+    <div>
       <input
         type="text"
         v-model="keyword"
@@ -45,7 +45,7 @@ onMounted(() => {
       />
     </div>
     <!--  -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
       <router-link
         :to="{
           name: 'byIngredient',
