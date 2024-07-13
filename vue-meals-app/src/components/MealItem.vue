@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps } from 'vue';
+import { computed, defineProps } from 'vue';
 import YouTubeButton from "./YouTubeButton.vue";
 
 const { meal } = defineProps({
@@ -9,6 +9,14 @@ const { meal } = defineProps({
   }
 })
 
+// 
+const truncatedInstructions = computed(() => {
+  if (meal.value?.strInstructions) {
+    const words = meal.value.strInstructions.split(' ');
+    return words.slice(0, 20).join(' ') + ' ...';
+  }
+  return '';
+});
 </script>
 
 <template>
@@ -23,8 +31,9 @@ const { meal } = defineProps({
     <div class="p-3">
       <h3 class="font-bold">{{ meal.strMeal }}</h3>
       <p class="mb-4" v-if="meal?.strInstructions">
-        {{ `${meal?.strInstructions.slice(0, 82)} …`  }}
+        <!-- {{ `${meal?.strInstructions.slice(0, 82)} …`  }} -->
         <!-- {{ $filters.truncateWords(meal.strInstructions, 20) }} -->
+        {{ truncatedInstructions }}
       </p>
       <div class="flex items-center justify-between mt-4">
         <YouTubeButton :href="meal.strYoutube" />
@@ -33,4 +42,8 @@ const { meal } = defineProps({
   </div>
 </template>
 
+
+function truncateDescriptionWords() {
+  throw new Error('Function not implemented.');
+}
 <style lang=""></style>

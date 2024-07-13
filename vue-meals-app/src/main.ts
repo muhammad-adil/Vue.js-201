@@ -4,7 +4,10 @@ import store from "./store";
 import "./style.css";
 import App from "./App.vue";
 
-createApp(App)
-    .use(router)
-    .use(store)
-    .mount("#app");
+import * as filters from './filters'
+
+
+const app = createApp(App);
+app.use(router).use(store).mount("#app");
+
+app.config.globalProperties.$filters = filters
