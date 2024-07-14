@@ -8,7 +8,6 @@ import Meals from "../components/Meals.vue";
 
 const route = useRoute();
 
-console.log("Search Meal By Letter");
 const letters: string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 const meals = computed(() => store.state.mealsByLetter);

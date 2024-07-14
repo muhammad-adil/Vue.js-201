@@ -25,7 +25,6 @@ function openIngredient(ingredient) {
 }
 
 onMounted(() => {
-    console.log("Ingredients view", ingredients.value )
   axiosClient.get("list.php?i=list").then(({ data }) => {
     ingredients.value = data.meals;
   });

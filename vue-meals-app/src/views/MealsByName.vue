@@ -6,8 +6,6 @@ import { useRoute } from "vue-router";
 // import MealItem from "../components/MealItem.vue";
 import Meals from "../components/Meals.vue";
 
-console.log("Search Meal By Name");
-
 let keyword = ref<string>("");
 
 const meals = computed(() => store.state.searchedMeals);

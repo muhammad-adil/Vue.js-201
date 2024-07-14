@@ -1,5 +1,4 @@
 <script setup lang="ts">
-    console.log("MealList view")
 </script>
 
 <template>

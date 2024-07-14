@@ -1,5 +1,4 @@
 <script setup lang="ts">
-console.log("Search By Ingredients");
 import { computed } from "@vue/reactivity";
 import { onMounted, watch } from "vue";
 import { useRoute } from "vue-router";
