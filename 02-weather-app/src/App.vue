@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import SearchInput from './components/SearchInput.vue'
+import { ref } from "vue";
+import SearchInput from "./components/SearchInput.vue";
+import WeatherCard from "./components/WeatherCard.vue";
 
-const places = ref([])
+const places = ref([]);
 
 const addPlace = (data) => {
-  places.value.push(data)
-}
+  places.value.push(data);
+};
 
 const deletePlace = (name) => {
-  if (confirm('Are you sure')) {
-    places.value = places.value.filter((p) => p.location.name !== name)
+  if (confirm("Are you sure")) {
+    places.value = places.value.filter((p) => p.location.name !== name);
   }
-}
-
+};
 </script>
 
 <template>
-  <main>
+  <main class="max-w-[1200px] mx-auto">
     <!-- <h1 class="text-4xl font-bold">Home</h1> -->
     <!-- Date -->
     <div class="text-center mb-6">
@@ -36,7 +36,12 @@ const deletePlace = (name) => {
       <SearchInput @place-data="addPlace" />
     </div>
 
-
+    <!-- Weather cards -->
+    <div class="grid grid-cols-2 gap-4">
+      <div v-for="(place, idx) in places" :key="idx">
+        <WeatherCard :place="place" @delete-place="deletePlace" />
+      </div>
+    </div>
   </main>
 </template>
 
